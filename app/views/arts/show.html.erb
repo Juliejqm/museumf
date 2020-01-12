@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= @art.title %>
+</p>
+
+<p>
+  <%= @art.author %>
+</p>
+
+<p>
+  <%= @art.date %>
+</p>
+
+<p>
+  <%= @art.dimensions %>
+</p>
+
+<p>
+  <%= @art.photo %>
+</p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @art.theme %>
+</p>
+
+<%= link_to 'Edit', edit_art_path(@art) %> |
+<%= link_to 'Back', themes_path %>
+

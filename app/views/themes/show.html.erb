@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <center><%= @theme.title %></center>
+</p>
+
+<br>
+
+<table class="container">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Date</th>
+      <th>Dimensions</th>
+      <th>Photo</th>
+      <th>Theme</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody class="container">
+    <% @theme.arts.each do |art| %>
+      <tr>
+        <td><%= art.title %></td>
+        <td><%= art.author %></td>
+        <td><%= art.date %></td>
+        <td><%= art.dimensions %></td>
+        <td><%= art.photo %></td>
+        <td><%= art.theme %></td>
+        <td><%= link_to 'Show', art %></td>
+        <td><%= link_to 'Edit', edit_art_path(art) %></td>
+        <td><%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table> 
+
+<%= link_to 'New Art', new_art_path %>
+<br><br>
+<%= link_to 'Back', themes_path %>
+
+
